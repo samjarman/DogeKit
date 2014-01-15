@@ -18,7 +18,7 @@
 		8A2914A118864CF700E01AC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A2914A018864CF700E01AC8 /* Images.xcassets */; };
 		8A2914A918864CF700E01AC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A29148518864CF700E01AC8 /* Foundation.framework */; };
 		8A2914AA18864CF700E01AC8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A29148918864CF700E01AC8 /* UIKit.framework */; };
-		8A2914C21886579F00E01AC8 /* DogeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2914C11886579F00E01AC8 /* DogeKit.m */; };
+		CE49EA1818872347001DBC85 /* DogeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CE49EA1718872346001DBC85 /* DogeKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +47,8 @@
 		8A29149E18864CF700E01AC8 /* DKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKViewController.m; sourceTree = "<group>"; };
 		8A2914A018864CF700E01AC8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8A2914A618864CF700E01AC8 /* DogeKitTestProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogeKitTestProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A2914C01886579F00E01AC8 /* DogeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DogeKit.h; sourceTree = "<group>"; };
-		8A2914C11886579F00E01AC8 /* DogeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogeKit.m; sourceTree = "<group>"; };
+		CE49EA1618872346001DBC85 /* DogeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DogeKit.h; path = ../DogeKit.h; sourceTree = "<group>"; };
+		CE49EA1718872346001DBC85 /* DogeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DogeKit.m; path = ../DogeKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +77,8 @@
 		8A29147918864CF700E01AC8 = {
 			isa = PBXGroup;
 			children = (
-				8A2914C01886579F00E01AC8 /* DogeKit.h */,
-				8A2914C11886579F00E01AC8 /* DogeKit.m */,
+				CE49EA1618872346001DBC85 /* DogeKit.h */,
+				CE49EA1718872346001DBC85 /* DogeKit.m */,
 				8A29148B18864CF700E01AC8 /* DogeKitTestProject */,
 				8A29148418864CF700E01AC8 /* Frameworks */,
 				8A29148318864CF700E01AC8 /* Products */,
@@ -229,7 +229,7 @@
 				8A29149218864CF700E01AC8 /* main.m in Sources */,
 				8A29149F18864CF700E01AC8 /* DKViewController.m in Sources */,
 				8A29149618864CF700E01AC8 /* DKAppDelegate.m in Sources */,
-				8A2914C21886579F00E01AC8 /* DogeKit.m in Sources */,
+				CE49EA1818872347001DBC85 /* DogeKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

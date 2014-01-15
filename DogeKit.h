@@ -12,10 +12,13 @@
 
 @property (nonatomic, strong) NSMutableArray *prefixes;
 @property (nonatomic, strong) NSMutableArray *things;
-@property (nonatomic) NSTimeInterval secondsInterval;
+@property (nonatomic, assign) NSTimeInterval secondsInterval;
 @property (nonatomic, strong) UIView *targetView;
+@property (nonatomic, assign, readonly) BOOL isRunning;
 
 -(void) start;
 -(void) stop;
+-(void) clear;
 -(id)initWithTargetView:(UIView *)view;
+
 @end
