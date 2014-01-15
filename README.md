@@ -1,4 +1,4 @@
-DogeKit for iOS
+DogeKit for iOS - Dogeumentation
 =======
 
 
