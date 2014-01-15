@@ -9,7 +9,7 @@ Until Cocoapods is working, just copy DogeKit.h and DogeKit.m into your project,
 	#include "DogeKit.h"
 
 
-###Useage
+###Usage
 
 	DogeKit *dk = [[DogeKit alloc] initWithTargetView:self.view]; //Init with a target view
 
