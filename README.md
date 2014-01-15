@@ -1,6 +1,7 @@
 DogeKit for iOS
 =======
 
+
 DogeKit was inspired by [this project.](https://github.com/idiot/doge) It's meant for a laugh during those times in development where things just aren't going your way. Other good use could be an easter egg. 
 
 ###Installation
@@ -28,5 +29,9 @@ I'd love them!
 ### Comments?
 Let's hear them! (The nice ones please!)
 
+
 ### Me? 
 In case you're interested I'm [@samjarman](http://twitter.com/samjarman)
+
+![Doge](http://weknowmemes.com/generator/uploads/generated/g1387468120607223108.jpg)
+
