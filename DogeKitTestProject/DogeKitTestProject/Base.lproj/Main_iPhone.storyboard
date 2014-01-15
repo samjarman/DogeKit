@@ -16,9 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfm-xs-PG5">
-                                <rect key="frame" x="107" y="191" width="107" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfm-xs-PG5">
+                                <rect key="frame" x="108" y="191" width="104" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bq5-3z-vlL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Start DogeKit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -27,7 +30,7 @@
                                     <action selector="startDogeKit:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8bM-vE-Xwo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAa-8X-pYv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAa-8X-pYv">
                                 <rect key="frame" x="109" y="274" width="103" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -38,7 +41,18 @@
                                     <action selector="stopDogeKit:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="U0N-Ri-83d"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UMs-bH-bas">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlZ-jn-0J6">
+                                <rect key="frame" x="107" y="361" width="107" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Clear DogeKit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearDogeKit:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="U5c-Cx-fUu"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMs-bH-bas">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
@@ -47,6 +61,17 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FlZ-jn-0J6" firstAttribute="top" secondItem="nAa-8X-pYv" secondAttribute="bottom" constant="54" id="DTj-zc-NZz"/>
+                            <constraint firstAttribute="centerX" secondItem="nAa-8X-pYv" secondAttribute="centerX" id="Kwi-yq-SBM"/>
+                            <constraint firstItem="Gck-Kc-uRx" firstAttribute="top" secondItem="FlZ-jn-0J6" secondAttribute="bottom" constant="174" id="L27-e8-Cft"/>
+                            <constraint firstItem="UMs-bH-bas" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="VIP-So-Qkw"/>
+                            <constraint firstAttribute="centerX" secondItem="FlZ-jn-0J6" secondAttribute="centerX" id="VqH-Wu-MQd"/>
+                            <constraint firstAttribute="centerX" secondItem="Mfm-xs-PG5" secondAttribute="centerX" id="YPA-Hp-Q1A"/>
+                            <constraint firstItem="nAa-8X-pYv" firstAttribute="top" secondItem="Mfm-xs-PG5" secondAttribute="bottom" constant="53" id="pUX-L2-PMu"/>
+                            <constraint firstItem="UMs-bH-bas" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="y2R-8l-aqc"/>
+                            <constraint firstAttribute="trailing" secondItem="UMs-bH-bas" secondAttribute="trailing" id="zx6-YL-M5y"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

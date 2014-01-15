@@ -11,5 +11,6 @@
 @interface DKViewController : UIViewController
 - (IBAction)startDogeKit:(id)sender;
 - (IBAction)stopDogeKit:(id)sender;
+- (IBAction)clearDogeKit:(id)sender;
 
 @end
