@@ -35,6 +35,5 @@
 
 - (IBAction)stopDogeKit:(id)sender {
     [self.dk stop];
-
 }
 @end

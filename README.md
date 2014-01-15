@@ -20,7 +20,7 @@ Until Cocoapods is working, just copy DogeKit.h and DogeKit.m into your project,
 Extras...
 You can set your own 'things' too. These are then printed with prefixes. Prefixes are stored in a mutable array so you can change them as you like. You could consider changing out the prefixes for all the text in the user's current context. Such news. Much stocks. Wow. 
 
-	dk.things = [NSMutableArray arrayWithObjects:...,nil];
+	 dk.things = [NSMutableArray arrayWithObjects:<(id), ...>, nil];
 
 ### Pull Requests? 
 I'd love them!
