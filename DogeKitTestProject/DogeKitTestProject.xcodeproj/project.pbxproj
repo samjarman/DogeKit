@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A29148618864CF700E01AC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A29148518864CF700E01AC8 /* Foundation.framework */; };
+		8A29148818864CF700E01AC8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A29148718864CF700E01AC8 /* CoreGraphics.framework */; };
+		8A29148A18864CF700E01AC8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A29148918864CF700E01AC8 /* UIKit.framework */; };
+		8A29149018864CF700E01AC8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A29148E18864CF700E01AC8 /* InfoPlist.strings */; };
+		8A29149218864CF700E01AC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A29149118864CF700E01AC8 /* main.m */; };
+		8A29149618864CF700E01AC8 /* DKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A29149518864CF700E01AC8 /* DKAppDelegate.m */; };
+		8A29149918864CF700E01AC8 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A29149718864CF700E01AC8 /* Main_iPhone.storyboard */; };
+		8A29149F18864CF700E01AC8 /* DKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A29149E18864CF700E01AC8 /* DKViewController.m */; };
+		8A2914A118864CF700E01AC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A2914A018864CF700E01AC8 /* Images.xcassets */; };
+		8A2914A918864CF700E01AC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A29148518864CF700E01AC8 /* Foundation.framework */; };
+		8A2914AA18864CF700E01AC8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A29148918864CF700E01AC8 /* UIKit.framework */; };
+		8A2914C21886579F00E01AC8 /* DogeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2914C11886579F00E01AC8 /* DogeKit.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A2914AB18864CF700E01AC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A29147A18864CF700E01AC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A29148118864CF700E01AC8;
+			remoteInfo = DogeKitTestProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8A29148218864CF700E01AC8 /* DogeKitTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogeKitTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A29148518864CF700E01AC8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8A29148718864CF700E01AC8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8A29148918864CF700E01AC8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8A29148D18864CF700E01AC8 /* DogeKitTestProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DogeKitTestProject-Info.plist"; sourceTree = "<group>"; };
+		8A29148F18864CF700E01AC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8A29149118864CF700E01AC8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8A29149318864CF700E01AC8 /* DogeKitTestProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DogeKitTestProject-Prefix.pch"; sourceTree = "<group>"; };
+		8A29149418864CF700E01AC8 /* DKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKAppDelegate.h; sourceTree = "<group>"; };
+		8A29149518864CF700E01AC8 /* DKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKAppDelegate.m; sourceTree = "<group>"; };
+		8A29149818864CF700E01AC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		8A29149D18864CF700E01AC8 /* DKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKViewController.h; sourceTree = "<group>"; };
+		8A29149E18864CF700E01AC8 /* DKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKViewController.m; sourceTree = "<group>"; };
+		8A2914A018864CF700E01AC8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8A2914A618864CF700E01AC8 /* DogeKitTestProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogeKitTestProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A2914C01886579F00E01AC8 /* DogeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DogeKit.h; sourceTree = "<group>"; };
+		8A2914C11886579F00E01AC8 /* DogeKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogeKit.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A29147F18864CF700E01AC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A29148818864CF700E01AC8 /* CoreGraphics.framework in Frameworks */,
+				8A29148A18864CF700E01AC8 /* UIKit.framework in Frameworks */,
+				8A29148618864CF700E01AC8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A2914A318864CF700E01AC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A2914AA18864CF700E01AC8 /* UIKit.framework in Frameworks */,
+				8A2914A918864CF700E01AC8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A29147918864CF700E01AC8 = {
+			isa = PBXGroup;
+			children = (
+				8A2914C01886579F00E01AC8 /* DogeKit.h */,
+				8A2914C11886579F00E01AC8 /* DogeKit.m */,
+				8A29148B18864CF700E01AC8 /* DogeKitTestProject */,
+				8A29148418864CF700E01AC8 /* Frameworks */,
+				8A29148318864CF700E01AC8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A29148318864CF700E01AC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A29148218864CF700E01AC8 /* DogeKitTestProject.app */,
+				8A2914A618864CF700E01AC8 /* DogeKitTestProjectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A29148418864CF700E01AC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A29148518864CF700E01AC8 /* Foundation.framework */,
+				8A29148718864CF700E01AC8 /* CoreGraphics.framework */,
+				8A29148918864CF700E01AC8 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A29148B18864CF700E01AC8 /* DogeKitTestProject */ = {
+			isa = PBXGroup;
+			children = (
+				8A29149418864CF700E01AC8 /* DKAppDelegate.h */,
+				8A29149518864CF700E01AC8 /* DKAppDelegate.m */,
+				8A29149718864CF700E01AC8 /* Main_iPhone.storyboard */,
+				8A29149D18864CF700E01AC8 /* DKViewController.h */,
+				8A29149E18864CF700E01AC8 /* DKViewController.m */,
+				8A2914A018864CF700E01AC8 /* Images.xcassets */,
+				8A29148C18864CF700E01AC8 /* Supporting Files */,
+			);
+			path = DogeKitTestProject;
+			sourceTree = "<group>";
+		};
+		8A29148C18864CF700E01AC8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A29148D18864CF700E01AC8 /* DogeKitTestProject-Info.plist */,
+				8A29148E18864CF700E01AC8 /* InfoPlist.strings */,
+				8A29149118864CF700E01AC8 /* main.m */,
+				8A29149318864CF700E01AC8 /* DogeKitTestProject-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A29148118864CF700E01AC8 /* DogeKitTestProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A2914B718864CF700E01AC8 /* Build configuration list for PBXNativeTarget "DogeKitTestProject" */;
+			buildPhases = (
+				8A29147E18864CF700E01AC8 /* Sources */,
+				8A29147F18864CF700E01AC8 /* Frameworks */,
+				8A29148018864CF700E01AC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DogeKitTestProject;
+			productName = DogeKitTestProject;
+			productReference = 8A29148218864CF700E01AC8 /* DogeKitTestProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A2914A518864CF700E01AC8 /* DogeKitTestProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A2914BA18864CF700E01AC8 /* Build configuration list for PBXNativeTarget "DogeKitTestProjectTests" */;
+			buildPhases = (
+				8A2914A218864CF700E01AC8 /* Sources */,
+				8A2914A318864CF700E01AC8 /* Frameworks */,
+				8A2914A418864CF700E01AC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A2914AC18864CF700E01AC8 /* PBXTargetDependency */,
+			);
+			name = DogeKitTestProjectTests;
+			productName = DogeKitTestProjectTests;
+			productReference = 8A2914A618864CF700E01AC8 /* DogeKitTestProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A29147A18864CF700E01AC8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DK;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Sam Jarman";
+				TargetAttributes = {
+					8A2914A518864CF700E01AC8 = {
+						TestTargetID = 8A29148118864CF700E01AC8;
+					};
+				};
+			};
+			buildConfigurationList = 8A29147D18864CF700E01AC8 /* Build configuration list for PBXProject "DogeKitTestProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A29147918864CF700E01AC8;
+			productRefGroup = 8A29148318864CF700E01AC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A29148118864CF700E01AC8 /* DogeKitTestProject */,
+				8A2914A518864CF700E01AC8 /* DogeKitTestProjectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A29148018864CF700E01AC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A2914A118864CF700E01AC8 /* Images.xcassets in Resources */,
+				8A29149918864CF700E01AC8 /* Main_iPhone.storyboard in Resources */,
+				8A29149018864CF700E01AC8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A2914A418864CF700E01AC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A29147E18864CF700E01AC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A29149218864CF700E01AC8 /* main.m in Sources */,
+				8A29149F18864CF700E01AC8 /* DKViewController.m in Sources */,
+				8A29149618864CF700E01AC8 /* DKAppDelegate.m in Sources */,
+				8A2914C21886579F00E01AC8 /* DogeKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A2914A218864CF700E01AC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A2914AC18864CF700E01AC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A29148118864CF700E01AC8 /* DogeKitTestProject */;
+			targetProxy = 8A2914AB18864CF700E01AC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8A29148E18864CF700E01AC8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A29148F18864CF700E01AC8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8A29149718864CF700E01AC8 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A29149818864CF700E01AC8 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A2914B518864CF700E01AC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A2914B618864CF700E01AC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A2914B818864CF700E01AC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DogeKitTestProject/DogeKitTestProject-Prefix.pch";
+				INFOPLIST_FILE = "DogeKitTestProject/DogeKitTestProject-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8A2914B918864CF700E01AC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DogeKitTestProject/DogeKitTestProject-Prefix.pch";
+				INFOPLIST_FILE = "DogeKitTestProject/DogeKitTestProject-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8A2914BB18864CF700E01AC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DogeKitTestProject.app/DogeKitTestProject";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DogeKitTestProject/DogeKitTestProject-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DogeKitTestProjectTests/DogeKitTestProjectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8A2914BC18864CF700E01AC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DogeKitTestProject.app/DogeKitTestProject";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DogeKitTestProject/DogeKitTestProject-Prefix.pch";
+				INFOPLIST_FILE = "DogeKitTestProjectTests/DogeKitTestProjectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A29147D18864CF700E01AC8 /* Build configuration list for PBXProject "DogeKitTestProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A2914B518864CF700E01AC8 /* Debug */,
+				8A2914B618864CF700E01AC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A2914B718864CF700E01AC8 /* Build configuration list for PBXNativeTarget "DogeKitTestProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A2914B818864CF700E01AC8 /* Debug */,
+				8A2914B918864CF700E01AC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A2914BA18864CF700E01AC8 /* Build configuration list for PBXNativeTarget "DogeKitTestProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A2914BB18864CF700E01AC8 /* Debug */,
+				8A2914BC18864CF700E01AC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A29147A18864CF700E01AC8 /* Project object */;
+}
