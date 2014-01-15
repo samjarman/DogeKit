@@ -1,6 +1,10 @@
 DogeKit for iOS - Dogeumentation
 =======
 
+![Example](http://i.imgur.com/wHyo2gn.png)
+
+
+
 
 DogeKit was inspired by [this project.](http://visualidiot.com/articles/doge) It's meant for a laugh during those times in development where things just aren't going your way. Other good use could be an easter egg. 
 
@@ -26,6 +30,10 @@ Extras...
 You can set your own 'things' too. These are then printed with prefixes. Prefixes are stored in a mutable array so you can change them as you like. You could consider changing out the prefixes for all the text in the user's current context. Such news. Much stocks. Wow. 
 
 	 dk.things = [NSMutableArray arrayWithObjects:<(id), ...>, nil];
+	 
+If you really wanted to, you can also clear the labels again thanks to [this pull request](https://github.com/samjarman/DogeKit/pull/1)
+
+    [dk clear];
 
 ### Pull Requests? 
 I'd love them!
