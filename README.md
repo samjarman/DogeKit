@@ -5,7 +5,11 @@ DogeKit for iOS
 DogeKit was inspired by [this project.](http://visualidiot.com/articles/doge) It's meant for a laugh during those times in development where things just aren't going your way. Other good use could be an easter egg. 
 
 ###Installation
-Until Cocoapods is working, just copy DogeKit.h and DogeKit.m into your project, and whereever you'd like to use it, just include it. 
+If you use Cocoapods:
+`pod 'DogeKit'`
+then `#include "DogeKit.h"`
+
+If not, just copy DogeKit.h and DogeKit.m into your project, and whereever you'd like to use it, just include it. 
 
 	#include "DogeKit.h"
 
