@@ -46,7 +46,7 @@ Let's hear them! (The nice ones please!)
 In case you're interested I'm [@samjarman](http://twitter.com/samjarman)
 
 ### Using DogeKit?
-Simply submit a pull request editing this read me. Or tweet me. 
+Simply submit a pull request editing this ReadMe. Or tweet me. 
 
 ### Apps using DogeKit:
 Who will be first?
