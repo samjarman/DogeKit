@@ -6,7 +6,7 @@ DogeKit for iOS - Dogeumentation
 
 
 
-DogeKit was inspired by [this project.](http://visualidiot.com/articles/doge) It's meant for a laugh during those times in development where things just aren't going your way. Other good use could be an easter egg. 
+DogeKit was inspired by [this project.](http://visualidiot.com/articles/doge) Use it as you like. 
 
 ###Installation
 If you use Cocoapods:
@@ -44,6 +44,12 @@ Let's hear them! (The nice ones please!)
 
 ### Me? 
 In case you're interested I'm [@samjarman](http://twitter.com/samjarman)
+
+### Using DogeKit?
+Simply submit a pull request editing this read me. Or tweet me. 
+
+### Apps using DogeKit:
+Who will be first?
 
 ![Doge](http://weknowmemes.com/generator/uploads/generated/g1387468120607223108.jpg)
 
