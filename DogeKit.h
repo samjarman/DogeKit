@@ -19,6 +19,9 @@
 -(void) start;
 -(void) stop;
 -(void) clear;
+-(void) toggle;
 -(id)initWithTargetView:(UIView *)view;
+
++(instancetype) sharedInstance;
 
 @end
