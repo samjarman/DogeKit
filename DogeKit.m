@@ -61,11 +61,8 @@
 }
 
 -(void) drawText{
-    //Position
-    CGFloat x = (CGFloat) (arc4random() % (int) self.targetView.frame.size.width);
-    CGFloat y = (CGFloat) (arc4random() % (int) self.targetView.frame.size.height);
 
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(x, y, 0.0f, 0.0f)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
     
     //Text
     NSString *prefix = self.prefixes[arc4random()%self.prefixes.count];
@@ -85,6 +82,13 @@
     
     //Resize
     [label sizeToFit];
+    
+    //Position
+    int relativeWidth = self.targetView.frame.size.width - label.frame.size.width;
+    CGFloat x = (CGFloat) (arc4random() % relativeWidth);
+    CGFloat y = (CGFloat) (arc4random() % (int) self.targetView.frame.size.height);
+    
+    label.frame = CGRectMake(x, y, label.frame.size.width, label.frame.size.height);
     
     [self.labels addObject:label];
     [self.targetView addSubview:label];
