@@ -22,6 +22,7 @@
     
     self.dk = [[DogeKit alloc] initWithTargetView:self.view];
     [self.dk addObserver:self forKeyPath:@"isRunning" options:kNilOptions context:nil];
+    self.dk.shouldRotateLabels = YES;
 }
 
 - (void)dealloc {
