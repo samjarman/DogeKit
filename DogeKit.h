@@ -19,6 +19,8 @@
 @property (nonatomic, readwrite) CGFloat minSize;
 @property (nonatomic, readwrite) CGFloat maxSize;
 
+@property (nonatomic, readwrite) BOOL shouldRotateLabels;
+
 -(void) start;
 -(void) stop;
 -(void) clear;

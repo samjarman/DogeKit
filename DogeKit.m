@@ -7,6 +7,7 @@
 //
 
 #define kDEFAULT_MIN_FONT   13
+#define kDEGREES_TO_RADIANS(x) ((x) * M_PI / 180.0)
 
 #import "DogeKit.h"
 @interface DogeKit ()
@@ -111,6 +112,13 @@
     CGFloat y = (CGFloat) (arc4random() % (int) self.targetView.frame.size.height);
     
     label.frame = CGRectMake(x, y, label.frame.size.width, label.frame.size.height);
+    
+    if (self.shouldRotateLabels)
+    {
+        CGFloat randomAngle = arc4random() % 90;
+        // Randomly rotate from 315º to 45º
+        label.transform = CGAffineTransformMakeRotation(kDEGREES_TO_RADIANS(315 + randomAngle));
+    }
     
     [self.labels addObject:label];
     [self.targetView addSubview:label];
