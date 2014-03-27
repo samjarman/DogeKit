@@ -6,6 +6,9 @@
 //  Copyright (c) 2014 Sam Jarman. All rights reserved.
 //
 
+#define kDEFAULT_MIN_FONT   13
+#define kDEGREES_TO_RADIANS(x) ((x) * M_PI / 180.0)
+
 #import "DogeKit.h"
 @interface DogeKit ()
 @property (nonatomic, assign, readwrite) BOOL isRunning;
@@ -39,6 +42,9 @@
         self.things = [NSMutableArray arrayWithObjects:@"doge", @"shibe", @"excite", @"impress", @"skill", @"warn", nil];
         self.secondsInterval = 0.5;
         self.labels = [[NSMutableArray alloc] init];
+        
+        self.minSize = nanf(NULL);
+        self.maxSize = nanf(NULL);
     }
     
     return self;
@@ -84,11 +90,8 @@
 }
 
 -(void) drawText{
-    //Position
-    CGFloat x = (CGFloat) (arc4random() % (int) self.targetView.frame.size.width);
-    CGFloat y = (CGFloat) (arc4random() % (int) self.targetView.frame.size.height);
 
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(x, y, 0.0f, 0.0f)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
     
     //Text
     NSString *prefix = self.prefixes[arc4random()%self.prefixes.count];
@@ -103,11 +106,42 @@
     //Color
     label.textColor = [UIColor colorWithRed:arc4random()%255 / 255.0f green:arc4random()%255 / 255.0f blue:arc4random()%255 / 255.0f alpha:1.0f];
     
+    CGFloat fontSize;
+    if (! isnan(self.minSize))
+    {
+        if (! isnan(self.maxSize))
+        {
+            fontSize = (arc4random() % (int)(self.maxSize - self.minSize)) + self.minSize;
+        }
+        else
+        {
+            fontSize = (arc4random() % (int)self.minSize) + self.minSize;
+        }
+    }
+    else
+    {
+        fontSize = (arc4random() % kDEFAULT_MIN_FONT) + kDEFAULT_MIN_FONT;
+    }
+    
     //Font (between 12 and 23)
-    label.font = [UIFont fontWithName:@"ChalkboardSE-Regular" size:((arc4random()%(24-12))+12)];
+    label.font = [UIFont fontWithName:@"ChalkboardSE-Regular" size:fontSize];
     
     //Resize
     [label sizeToFit];
+    
+    //Position
+    int relativeWidth = self.targetView.frame.size.width - label.frame.size.width;
+    CGFloat x = (CGFloat) (arc4random() % relativeWidth);
+    CGFloat y = (CGFloat) (arc4random() % (int) self.targetView.frame.size.height);
+    
+    label.frame = CGRectMake(x, y, label.frame.size.width, label.frame.size.height);
+    
+    if (self.shouldRotateLabels)
+    {
+        CGFloat randomAngle = arc4random() % 90;
+        // Randomly rotate from 315º to 45º
+        label.transform = CGAffineTransformMakeRotation(kDEGREES_TO_RADIANS(315 + randomAngle));
+    }
     
     [self.labels addObject:label];
     [self.targetView addSubview:label];

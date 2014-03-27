@@ -16,6 +16,11 @@
 @property (nonatomic, strong) UIView *targetView;
 @property (nonatomic, assign, readonly) BOOL isRunning;
 
+@property (nonatomic, readwrite) CGFloat minSize;
+@property (nonatomic, readwrite) CGFloat maxSize;
+
+@property (nonatomic, readwrite) BOOL shouldRotateLabels;
+
 -(void) start;
 -(void) stop;
 -(void) clear;
