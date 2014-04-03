@@ -20,21 +20,60 @@ If not, just copy DogeKit.h and DogeKit.m into your project, and whereever you'd
 
 ###Usage
 
-	DogeKit *dk = [[DogeKit alloc] initWithTargetView:self.view]; //Init with a target view
+```objc
 
-	[dk start]; //Start adding comments to your view
+DogeKit *dk = [[DogeKit alloc] initWithTargetView:self.view]; //Init with a target view
 
-	[dk stop]; //Stop adding comments to your view
+[dk start]; //Start adding comments to your view
+
+[dk stop]; //Stop adding comments to your view
+
+```
 	
+Or you can use the `sharedInstance`. So you can have DogeKit supported all throughout your application if you want.
+
+For example you can set it up so no matter what view you are in, if you tap on the navigation bar (or something) DogeKit will be triggered
+
+*In AppDelegate or somewhere*
+
+
+```objc
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	// code...
+	
+	UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+	
+	// Add gesture recognizer to toggle DogeKit if two figer tap 
+	// is done on navigation bar
+	UITapGestureRecognizer *superTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleDogeKit)];
+       superTap.numberOfTapsRequired = 1;
+       superTap.numberOfTouchesRequired = 2;
+       [navigationController.navigationBar addGestureRecognizer:superTap];
+       
+	return YES;
+}
+
+// More AppDelegate Code...
+
+- (void)toggleDogeKit {
+    [[DogeKit sharedInstance] toggle];
+}
+	
+```
+
 Extras...
 You can set your own 'things' too. These are then printed with prefixes. Prefixes are stored in a mutable array so you can change them as you like. You could consider changing out the prefixes for all the text in the user's current context. Such news. Much stocks. Wow. 
 
-	 dk.things = [NSMutableArray arrayWithObjects:<(id), ...>, nil];
-	 
+```objc
+dk.things = [NSMutableArray arrayWithObjects:<(id), ...>, nil];
+	
+``` 
 If you really wanted to, you can also clear the labels again thanks to [this pull request](https://github.com/samjarman/DogeKit/pull/1)
 
-    [dk clear];
-
+```objc
+[dk clear];
+```
 ### Pull Requests? 
 I'd love them!
 

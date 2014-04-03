@@ -14,10 +14,24 @@
 @property (nonatomic, assign, readwrite) BOOL isRunning;
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) NSMutableArray *labels;
+@property (nonatomic, weak) id<UIApplicationDelegate> appDelegate;
 @end
 
 
 @implementation DogeKit
+
++ (instancetype)sharedInstance {
+    static DogeKit *_shared = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _shared = [[self alloc] init];
+        _shared.appDelegate = [[UIApplication sharedApplication] delegate];
+    });
+    
+    _shared.targetView = _shared.appDelegate.window.subviews.lastObject;
+    
+    return _shared;
+}
 
 - (id)init {
     self = [super init];
@@ -64,6 +78,15 @@
     [labels enumerateObjectsUsingBlock:^(UILabel *label, NSUInteger idx, BOOL *stop) {
         [label removeFromSuperview];
     }];
+}
+
+-(void) toggle {
+    if (self.isRunning) {
+        [self stop];
+        [self clear];
+    } else {
+        [self start];
+    }
 }
 
 -(void) drawText{
