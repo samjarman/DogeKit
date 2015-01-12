@@ -18,14 +18,18 @@
 
 @property (nonatomic, readwrite) CGFloat minSize;
 @property (nonatomic, readwrite) CGFloat maxSize;
+@property (nonatomic, readwrite) NSInteger thingWordMinLength;
+
 
 @property (nonatomic, readwrite) BOOL shouldRotateLabels;
+@property (nonatomic, assign) BOOL isAutomatic;
 
 -(void) start;
 -(void) stop;
 -(void) clear;
 -(void) toggle;
 -(id)initWithTargetView:(UIView *)view;
+-(id)initWithTargetView:(UIView *)view automatic:(BOOL)automatic;
 
 +(instancetype) sharedInstance;
 

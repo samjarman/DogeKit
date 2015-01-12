@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name             = 'DogeKit'
   spec.version          = '0.0.2'
-  spec.platform          = 'ios'
+  spec.platform	        = :ios, "5.0"
   spec.license          = 'MIT' 
   spec.homepage         = 'https://github.com/samjarman/DogeKit'
   spec.authors          = 'Sam Jarman'

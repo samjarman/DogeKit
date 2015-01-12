@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,74 +15,73 @@
                         <viewControllerLayoutGuide type="bottom" id="Gck-Kc-uRx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfm-xs-PG5">
-                                <rect key="frame" x="108" y="191" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="bq5-3z-vlL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Start DogeKit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="startDogeKit:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8bM-vE-Xwo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAa-8X-pYv">
-                                <rect key="frame" x="109" y="274" width="103" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Stop DogeKit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="stopDogeKit:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="U0N-Ri-83d"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlZ-jn-0J6">
-                                <rect key="frame" x="107" y="361" width="107" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Clear DogeKit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearDogeKit:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="U5c-Cx-fUu"/>
-                                </connections>
-                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3b-sL-5KY">
+                                <rect key="frame" x="0.0" y="44" width="600" height="512"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra metus in nulla semper, et egestas ex elementum. Quisque egestas eu lectus ut pellentesque. Vivamus placerat ipsum a eros congue consectetur. Etiam hendrerit sem consectetur mi vehicula, vitae lobortis sem sollicitudin. Fusce quis congue dui. Etiam eu ornare ante, vulputate malesuada erat. Suspendisse mollis diam ac massa consequat, ac suscipit dolor ultrices.
+
+Ut laoreet mauris luctus dolor lacinia, ut feugiat ligula placerat. Quisque lacinia suscipit faucibus. In tincidunt pulvinar libero eget pellentesque. Sed dui risus, ullamcorper vel varius eu, mattis eu libero. Cras finibus pretium nisi, ut maximus ipsum ultricies et. Nullam hendrerit turpis at posuere tristique. Sed finibus sed urna vitae rutrum. Donec tempus pulvinar aliquet. Aliquam lectus enim, porta at feugiat ut, interdum vitae nisl.
+
+Proin pulvinar leo in tellus pellentesque vulputate. Integer imperdiet sed est vel venenatis. Praesent bibendum feugiat diam eget ultrices. Fusce sit amet egestas orci. Donec augue orci, tempor eget erat eu, porta ullamcorper odio. Vivamus a nibh dignissim, scelerisque odio ut, lobortis massa. Nulla tristique tortor a quam malesuada sollicitudin. Sed ac faucibus purus. Nunc volutpat quis mauris eu malesuada.
+
+Aliquam eros diam, consequat vel justo vel, aliquam porta orci. Nam ac tortor vulputate, elementum purus sit amet, laoreet ex. Donec et erat vel mi finibus imperdiet. Vivamus ullamcorper sagittis enim. Vivamus at orci eget sem efficitur eleifend a ac turpis. Mauris sit amet tempus justo, id tristique neque. Quisque eu consectetur diam. Donec cursus tincidunt lacus, ut iaculis risus commodo et. Phasellus dictum id est sed posuere. Nulla non sapien eget magna fringilla ultrices at sit amet massa. Praesent tellus augue, tincidunt non nisi ornare, consectetur suscipit velit. Pellentesque dictum metus leo, nec bibendum arcu placerat quis. Donec vitae ex ut lorem suscipit gravida.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum risus felis, blandit eget enim sit amet, interdum aliquet ante. Sed finibus, dui sit amet rutrum facilisis, metus purus congue dui, a condimentum leo felis id ligula. Nullam sed dui vestibulum libero venenatis mollis. Duis in interdum ipsum, sed efficitur nibh. Curabitur nec dictum nisl, a consequat augue. Pellentesque justo elit, ornare eu augue dapibus, mattis scelerisque urna. Phasellus tellus felis, lobortis id sapien sit amet, sodales ornare felis. Sed at maximus ex, ultricies condimentum ex. Vestibulum vulputate quam vel augue maximus consequat. Duis aliquam est eleifend arcu efficitur tincidunt.
+
+Morbi non sollicitudin dolor. Etiam pulvinar mi non ante volutpat, sit amet venenatis mi congue. Morbi consectetur imperdiet mi, ut ultricies nulla suscipit non. In pharetra justo sit amet ligula gravida rutrum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras cursus quis tortor vitae tempus. Integer placerat enim eget faucibus elementum. Nullam ac hendrerit libero. Ut massa est, condimentum ut egestas quis, posuere et ex. Nullam pretium nisl urna, at tempor ligula ultricies nec. Suspendisse volutpat sagittis felis auctor elementum. Donec eget felis mollis, congue ligula hendrerit, semper ipsum. Ut nunc ante, bibendum in urna et, blandit convallis urna. Maecenas a hendrerit eros. Etiam.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMs-bH-bas">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="DogeKit" id="CQV-kI-5pd"/>
                                 </items>
                             </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZz-HM-86b">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Start" id="aoX-VC-ORb">
+                                        <connections>
+                                            <action selector="startDogeKit:" destination="x5A-6p-PRh" id="hhw-Ih-W8Y"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Stop" id="7TM-Gy-0ls">
+                                        <connections>
+                                            <action selector="stopDogeKit:" destination="x5A-6p-PRh" id="WWk-mD-8Jh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Clear" id="iO3-fF-Tz8">
+                                        <connections>
+                                            <action selector="clearDogeKit:" destination="x5A-6p-PRh" id="jRl-YK-fxr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FlZ-jn-0J6" firstAttribute="top" secondItem="nAa-8X-pYv" secondAttribute="bottom" constant="54" id="DTj-zc-NZz"/>
-                            <constraint firstAttribute="centerX" secondItem="nAa-8X-pYv" secondAttribute="centerX" id="Kwi-yq-SBM"/>
-                            <constraint firstItem="Gck-Kc-uRx" firstAttribute="top" secondItem="FlZ-jn-0J6" secondAttribute="bottom" constant="174" id="L27-e8-Cft"/>
+                            <constraint firstItem="CZz-HM-86b" firstAttribute="top" secondItem="L3b-sL-5KY" secondAttribute="bottom" id="6ET-1E-D7F"/>
+                            <constraint firstItem="CZz-HM-86b" firstAttribute="top" secondItem="L3b-sL-5KY" secondAttribute="bottom" id="9BV-xe-y1H"/>
+                            <constraint firstItem="CZz-HM-86b" firstAttribute="leading" secondItem="L3b-sL-5KY" secondAttribute="leading" id="FPK-ne-COi"/>
+                            <constraint firstItem="CZz-HM-86b" firstAttribute="bottom" secondItem="Gck-Kc-uRx" secondAttribute="top" id="HF2-vh-upW"/>
+                            <constraint firstItem="L3b-sL-5KY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="JNs-Nq-1fF"/>
                             <constraint firstItem="UMs-bH-bas" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="VIP-So-Qkw"/>
-                            <constraint firstAttribute="centerX" secondItem="FlZ-jn-0J6" secondAttribute="centerX" id="VqH-Wu-MQd"/>
-                            <constraint firstAttribute="centerX" secondItem="Mfm-xs-PG5" secondAttribute="centerX" id="YPA-Hp-Q1A"/>
-                            <constraint firstItem="nAa-8X-pYv" firstAttribute="top" secondItem="Mfm-xs-PG5" secondAttribute="bottom" constant="53" id="pUX-L2-PMu"/>
+                            <constraint firstItem="CZz-HM-86b" firstAttribute="trailing" secondItem="L3b-sL-5KY" secondAttribute="trailing" id="erT-O4-3yC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L3b-sL-5KY" secondAttribute="trailing" constant="-16" id="mXw-Df-mTO"/>
+                            <constraint firstItem="CZz-HM-86b" firstAttribute="top" secondItem="L3b-sL-5KY" secondAttribute="bottom" id="oQy-gz-uXx"/>
                             <constraint firstItem="UMs-bH-bas" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="y2R-8l-aqc"/>
+                            <constraint firstItem="L3b-sL-5KY" firstAttribute="top" secondItem="UMs-bH-bas" secondAttribute="bottom" id="ytf-ne-BlL"/>
                             <constraint firstAttribute="trailing" secondItem="UMs-bH-bas" secondAttribute="trailing" id="zx6-YL-M5y"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="350" y="255"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

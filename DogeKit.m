@@ -45,6 +45,7 @@
         
         self.minSize = nanf(NULL);
         self.maxSize = nanf(NULL);
+        self.thingWordMinLength = 4;
     }
     
     return self;
@@ -55,6 +56,48 @@
     self.targetView = view;
     
     return self;
+}
+
+-(id)initWithTargetView:(UIView *)view automatic:(BOOL)automatic{
+    self = [[DogeKit alloc] initWithTargetView:view];
+    self.isAutomatic = automatic;
+    [self createThings];
+    return self;
+}
+
+- (NSArray *)listSubviewsOfView:(UIView *)view {
+    NSMutableArray *views = [NSMutableArray array];
+    NSArray *subviews = [view subviews];
+    
+    if ([subviews count] == 0) return nil;
+    
+    for (UIView *subview in subviews) {
+        
+        [views addObject:subview];
+        
+        // List the subviews of subview
+        [views addObjectsFromArray:[self listSubviewsOfView:subview]];
+    }
+    return views;
+}
+-(void) createThings{
+    NSMutableArray *finalWords = [NSMutableArray array];
+    NSArray *views = [self listSubviewsOfView:self.targetView];
+    for (UIView *view in views) {
+        if ([view isKindOfClass:[UITextView class]]) {
+            UITextView *tv = (UITextView *)view;
+            NSArray *words = [tv.text componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            
+            for (NSString *word in words)
+            {
+                if (word.length >= self.thingWordMinLength) {
+                    [finalWords addObject:word];
+                }
+            }
+        }
+        //TODO: Add other types of text stores here - but best to refactor it out. Shame they don't have anything in common like an interface.
+    }
+    self.things = finalWords;
 }
 
 -(void) start{

@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>6726508E-5441-4D25-B135-659CDA86D62C</string>
+	<string>43DBF4CA-B4F5-42A3-A90A-9B04BD495C21</string>
 	<key>IDESourceControlProjectName</key>
 	<string>DogeKitTestProject</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>5E1FE7BF-AF84-4ADB-AAC4-4C960BF060BD</key>
-		<string>ssh://github.com/fjcaetano/DogeKit.git</string>
+		<key>031DCC51861FEC3A16CC3B1A49E083EE2EFCEE07</key>
+		<string>https://github.com/samjarman/DogeKit.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>DogeKitTestProject/DogeKitTestProject.xcodeproj/project.xcworkspace</string>
+	<string>DogeKitTestProject/DogeKitTestProject.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5E1FE7BF-AF84-4ADB-AAC4-4C960BF060BD</key>
+		<key>031DCC51861FEC3A16CC3B1A49E083EE2EFCEE07</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/fjcaetano/DogeKit.git</string>
+	<string>https://github.com/samjarman/DogeKit.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5E1FE7BF-AF84-4ADB-AAC4-4C960BF060BD</string>
+	<string>031DCC51861FEC3A16CC3B1A49E083EE2EFCEE07</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5E1FE7BF-AF84-4ADB-AAC4-4C960BF060BD</string>
+			<string>031DCC51861FEC3A16CC3B1A49E083EE2EFCEE07</string>
 			<key>IDESourceControlWCCName</key>
 			<string>DogeKit</string>
 		</dict>

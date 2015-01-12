@@ -20,7 +20,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.dk = [[DogeKit alloc] initWithTargetView:self.view];
+    self.dk = [[DogeKit alloc] initWithTargetView:self.view automatic:YES];
     [self.dk addObserver:self forKeyPath:@"isRunning" options:kNilOptions context:nil];
     self.dk.shouldRotateLabels = YES;
 }
