@@ -37,33 +37,24 @@
     self = [super init];
     
     if (self) {
-        // initialize instance variables here
         self.prefixes = [NSMutableArray arrayWithObjects:@"wow", @"such", @"very", @"much", nil];
         self.things = [NSMutableArray arrayWithObjects:@"doge", @"shibe", @"excite", @"impress", @"skill", @"warn", nil];
         self.secondsInterval = 0.5;
         self.labels = [[NSMutableArray alloc] init];
-        
         self.minSize = nanf(NULL);
         self.maxSize = nanf(NULL);
-        self.thingWordMinLength = 4;
     }
     
     return self;
 }
 
--(id)initWithTargetView:(UIView *)view{
+- (id)initWithTargetView:(UIView *)view {
     self = [[DogeKit alloc] init];
     self.targetView = view;
-    
     return self;
 }
 
--(id)initWithTargetView:(UIView *)view automatic:(BOOL)automatic{
-    self = [[DogeKit alloc] initWithTargetView:view];
-    self.isAutomatic = automatic;
-    [self createThings];
-    return self;
-}
+
 
 - (NSArray *)listSubviewsOfView:(UIView *)view {
     NSMutableArray *views = [NSMutableArray array];
@@ -72,42 +63,55 @@
     if ([subviews count] == 0) return nil;
     
     for (UIView *subview in subviews) {
-        
         [views addObject:subview];
-        
-        // List the subviews of subview
         [views addObjectsFromArray:[self listSubviewsOfView:subview]];
     }
+    
     return views;
 }
--(void) createThings{
+- (void)createThings {
+    
     NSMutableArray *finalWords = [NSMutableArray array];
     NSArray *views = [self listSubviewsOfView:self.targetView];
+    NSString *allText = @"";
+
     for (UIView *view in views) {
+
         if ([view isKindOfClass:[UITextView class]]) {
             UITextView *tv = (UITextView *)view;
-            NSArray *words = [tv.text componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-            
-            for (NSString *word in words)
-            {
-                if (word.length >= self.thingWordMinLength) {
-                    [finalWords addObject:word];
-                }
-            }
+            allText = [allText stringByAppendingString:tv.text];
         }
-        //TODO: Add other types of text stores here - but best to refactor it out. Shame they don't have anything in common like an interface.
+        if ([view isKindOfClass:[UILabel class]]) {
+            UITextView *tv = (UITextView *)view;
+            allText = [allText stringByAppendingString:tv.text];
+        }
+        //Add other texty things here
     }
+    NSArray *words = [allText componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    for (__strong NSString  *word in words){
+        word = [word stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+        if ([self.delegate allowWordInThings:word]) {
+            [finalWords addObject:word];
+        }
+    }
+   
+    
     self.things = finalWords;
+    NSLog(@"%@", [self.things componentsJoinedByString:@", "]);
 }
 
--(void) start{
+
+
+
+
+- (void)start {
     if (self.isRunning) return;
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:self.secondsInterval target:self selector:@selector(drawText) userInfo:nil repeats:YES];
     self.isRunning = YES;
 }
 
--(void) stop{
+- (void)stop {
     if (!self.isRunning) return;
     
     [self.timer invalidate];
@@ -115,7 +119,7 @@
     self.isRunning = NO;
 }
 
--(void) clear{
+- (void)clear {
     NSArray *labels = self.labels.copy;
     [self.labels removeAllObjects];
     [labels enumerateObjectsUsingBlock:^(UILabel *label, NSUInteger idx, BOOL *stop) {
@@ -123,7 +127,7 @@
     }];
 }
 
--(void) toggle {
+- (void)toggle {
     if (self.isRunning) {
         [self stop];
         [self clear];
@@ -132,7 +136,7 @@
     }
 }
 
--(void) drawText{
+- (void)drawText {
 
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
     

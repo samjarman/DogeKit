@@ -20,9 +20,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.dk = [[DogeKit alloc] initWithTargetView:self.view automatic:YES];
+    self.dk = [[DogeKit alloc] initWithTargetView:self.view];
     [self.dk addObserver:self forKeyPath:@"isRunning" options:kNilOptions context:nil];
     self.dk.shouldRotateLabels = YES;
+    self.dk.delegate = self;
+    [self.dk createThings];
 }
 
 - (void)dealloc {
@@ -51,6 +53,16 @@
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
+}
+
+
+#pragma mark -
+#pragma mark DogeKitDelegate methods
+
+-(BOOL)allowWordInThings:(NSString *)word{
+    if (word.length > 4) {
+        return YES;
+    } else return NO;
 }
 
 @end

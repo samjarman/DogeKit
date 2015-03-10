@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface DKViewController : UIViewController
+#import "DogeKit.h"
+@interface DKViewController : UIViewController <DogeKitDelegate>
 - (IBAction)startDogeKit:(id)sender;
 - (IBAction)stopDogeKit:(id)sender;
 - (IBAction)clearDogeKit:(id)sender;
