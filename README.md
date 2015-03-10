@@ -4,8 +4,6 @@ DogeKit for iOS - Dogeumentation
 ![Example](http://i.imgur.com/wHyo2gn.png)
 
 
-
-
 DogeKit was inspired by [this project.](http://visualidiot.com/articles/doge) Use it as you like. 
 
 ###Installation
@@ -20,14 +18,12 @@ If not, just copy DogeKit.h and DogeKit.m into your project, and whereever you'd
 
 ###Usage
 
-```objc
-
+```objc 
 DogeKit *dk = [[DogeKit alloc] initWithTargetView:self.view]; //Init with a target view
 
 [dk start]; //Start adding comments to your view
 
 [dk stop]; //Stop adding comments to your view
-
 ```
 	
 Or you can use the `sharedInstance`. So you can have DogeKit supported all throughout your application if you want.
@@ -38,9 +34,7 @@ For example you can set it up so no matter what view you are in, if you tap on t
 
 
 ```objc
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	// code...
 	
 	UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
 	
@@ -58,22 +52,47 @@ For example you can set it up so no matter what view you are in, if you tap on t
 
 - (void)toggleDogeKit {
     [[DogeKit sharedInstance] toggle];
-}
-	
+}	
 ```
 
-Extras...
+### Extras
 You can set your own 'things' too. These are then printed with prefixes. Prefixes are stored in a mutable array so you can change them as you like. You could consider changing out the prefixes for all the text in the user's current context. Such news. Much stocks. Wow. 
 
 ```objc
 dk.things = [NSMutableArray arrayWithObjects:<(id), ...>, nil];
-	
 ``` 
+#### DogeKitDelegate
+
+'Things' get even more powerful when you implement the DogeKitDelgate.
+
+```objc
+// After initilization
+
+dk.delegate = self;
+[dk createThings]; //Will traverse your hierarchy and pull out words and feed them to your delegate method.
+
+#pragma mark -
+#pragma mark DogeKitDelegate methods
+
+-(BOOL)allowWordInThings:(NSString *)word{
+    if (word.length > 4) { //A very simple filter
+        return YES;
+    } else return NO;
+}
+```
+
+#### Clearing
 If you really wanted to, you can also clear the labels again thanks to [this pull request](https://github.com/samjarman/DogeKit/pull/1)
 
 ```objc
 [dk clear];
 ```
+
+#### Label control.
+You can control the rotation and size of the lables with the `minSize`, `maxSize` and `shouldRotateLabels` properties thanks to [these pull requests](https://github.com/samjarman/DogeKit/pulls/fjcaetano).
+
+
+
 ### Pull Requests? 
 I'd love them!
 
