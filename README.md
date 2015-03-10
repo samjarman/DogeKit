@@ -88,7 +88,7 @@ If you really wanted to, you can also clear the labels again thanks to [this pul
 [dk clear];
 ```
 
-#### Label control.
+#### Label control
 You can control the rotation and size of the lables with the `minSize`, `maxSize` and `shouldRotateLabels` properties thanks to [these pull requests](https://github.com/samjarman/DogeKit/pulls/fjcaetano).
 
 
