@@ -6,7 +6,7 @@ DogeKit for iOS - Dogeumentation
 
 DogeKit was inspired by [this project.](http://visualidiot.com/articles/doge) Use it as you like. 
 
-###Installation
+### Installation
 If you use Cocoapods:
 `pod 'DogeKit'`
 then `#include "DogeKit.h"`
@@ -16,7 +16,7 @@ If not, just copy DogeKit.h and DogeKit.m into your project, and whereever you'd
 	#include "DogeKit.h"
 
 
-###Usage
+### Usage
 
 ```objc 
 DogeKit *dk = [[DogeKit alloc] initWithTargetView:self.view]; //Init with a target view
