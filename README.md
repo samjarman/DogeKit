@@ -6,7 +6,7 @@ DogeKit for iOS - Dogeumentation
 
 DogeKit was inspired by [this project.](http://visualidiot.com/articles/doge) Use it as you like. 
 
-###Installation
+### Installation
 If you use Cocoapods:
 `pod 'DogeKit'`
 then `#include "DogeKit.h"`
